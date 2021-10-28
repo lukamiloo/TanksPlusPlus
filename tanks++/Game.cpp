@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "Player.h"
 
 // constructor
 Game::Game() {
