@@ -5,11 +5,13 @@
 Game::Game() {
 	this->initVariables();
 	this->initWindow();
+	this->initPlayer();
 }
 
 // destructor
 Game::~Game() {
 	delete this->window;
+	delete this->player;
 }
 
 // initialize variables
@@ -23,6 +25,11 @@ void Game::initWindow() {
 	this->window = new sf::RenderWindow(sf::VideoMode(1920, 1080), "tanks++", sf::Style::Titlebar | sf::Style::Close);
 	// set 60 fps
 	this->window->setFramerateLimit(60);
+}
+
+// initialize player
+void Game::initPlayer() {
+	this->player = new Player();
 }
 
 /*
@@ -65,6 +72,7 @@ void Game::pollEvents() {
  */
 void Game::update() {
 	this->pollEvents();
+
 }
 
 /*
@@ -76,6 +84,7 @@ void Game::render() {
 	this->window->clear(sf::Color::White);
 
 	// all necessary renders go here
+	this->player->render(this->window);
 
 	this->window->display();
 }

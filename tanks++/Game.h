@@ -7,6 +7,8 @@
 #include <SFML\Audio.hpp>
 #include <iostream>
 
+#include "Player.h"
+
 /*
  *	Game
  * 
@@ -15,13 +17,14 @@
  */
 class Game {
 private:
-	// private variables();
+	// private variables
 	sf::RenderWindow* window;
 	sf::Event ev;
-
+	Player* player;
 	// initialization functions
 	void initVariables();
 	void initWindow();
+	void initPlayer();
 public:
 	// constructor / destructor
 	Game();

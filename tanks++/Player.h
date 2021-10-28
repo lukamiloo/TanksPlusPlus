@@ -14,8 +14,21 @@
  */
 class Player {
 private:
+	// private variables
+	sf::Sprite player;
+	sf::Texture texture;
+
+	// initialization functions
+	void initTexture();
+	void initSprite();
 public:
+	// constructor / destructor
 	Player();
+	virtual ~Player();
+
+	// display functions
+	void update();
+	void render(sf::RenderTarget* target);
 };
 
 #endif
