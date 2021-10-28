@@ -6,6 +6,7 @@ Game::Game() {
 	this->initVariables();
 	this->initWindow();
 	this->initPlayer();
+	this->initWalls();
 }
 
 // destructor
@@ -30,6 +31,15 @@ void Game::initWindow() {
 // initialize player
 void Game::initPlayer() {
 	this->player = new Player();
+}
+
+// initialize walls
+void Game::initWalls() {
+	Wall* wallLeft = new Wall(50, 1080, 0, 0);
+	Wall* wallRight = new Wall(50, 1080, 1870, 0);
+	Wall* wallTop = new Wall(1920, 50, 0, 1030);
+	Wall* wallBottom = new Wall(1920, 50, 0, 0);
+	walls = { wallLeft, wallRight, wallTop, wallBottom };
 }
 
 /*
@@ -72,7 +82,12 @@ void Game::pollEvents() {
  */
 void Game::update() {
 	this->pollEvents();
+	this->player->update();
 
+	// unnecessary as walls do not get updated as of now
+	// for (auto& wall : this->walls) {
+	//     wall->update();
+	// }
 }
 
 /*
@@ -85,6 +100,9 @@ void Game::render() {
 
 	// all necessary renders go here
 	this->player->render(this->window);
+	for (auto& wall : this->walls) {
+		wall->render(this->window);
+	}
 
 	this->window->display();
 }

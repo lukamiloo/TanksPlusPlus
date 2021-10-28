@@ -8,6 +8,7 @@
 #include <iostream>
 
 #include "Player.h"
+#include "Wall.h"
 
 /*
  *	Game
@@ -21,10 +22,12 @@ private:
 	sf::RenderWindow* window;
 	sf::Event ev;
 	Player* player;
+	std::vector<Wall*> walls;
 	// initialization functions
 	void initVariables();
 	void initWindow();
 	void initPlayer();
+	void initWalls();
 public:
 	// constructor / destructor
 	Game();

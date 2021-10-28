@@ -9,9 +9,16 @@
 
 class Wall {
 private:
+	sf::RectangleShape rect;
+	float posX, posY;
+
+	void initShape(float l, float w);
 public:
-	Wall();
+	Wall(float l, float w, float posX, float posY);
 	virtual ~Wall();
+
+	void update();
+	void render(sf::RenderWindow* target);
 };
 
 #endif
