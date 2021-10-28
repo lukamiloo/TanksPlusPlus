@@ -4,6 +4,7 @@
 Wall::Wall(float l, float w, float posX, float posY) {
 	this->posX = posX;
 	this->posY = posY;
+	this->initTexture();
 	this->initShape(l, w);
 }
 
@@ -11,12 +12,19 @@ Wall::Wall(float l, float w, float posX, float posY) {
 Wall::~Wall() {
 }
 
+// initialize texture
+void Wall::initTexture() {
+	this->texture.loadFromFile("Textures/wall.png");
+	this->texture.setRepeated(true);
+}
 
 // initialize wall
 void Wall::initShape(float l, float w) {
 	this->rect.setSize(sf::Vector2f(l, w));
 	this->rect.setPosition(sf::Vector2f(posX, posY));
-	this->rect.setFillColor(sf::Color::Black);
+	this->rect.setTexture(&this->texture);
+	// not too sure how setTextureRect works still
+	this->rect.setTextureRect(sf::IntRect(0, 0, l*4, w*4));
 }
 
 /*
