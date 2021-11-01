@@ -7,10 +7,9 @@
 #include <SFML/Audio.hpp>
 #include <iostream>
 
-// #include "Player.h"
-// #include "Wall.h"
-#include "Player.cpp"
-#include "Wall.cpp"
+#include "Player.h"
+#include "Wall.h"
+
 /*
  *	Game
  * 
