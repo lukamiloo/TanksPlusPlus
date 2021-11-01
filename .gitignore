@@ -3,9 +3,6 @@
 sfml-app
 main-o
 main-o.exe
-<<<<<<< HEAD
-sfml-app.exe
-=======
 sfml-app.exe
 sfml-audio-2.dll
 sfml-audio-d-2.dll
@@ -19,4 +16,8 @@ sfml-window-2.dll
 sfml-window-d-2.dll
 openal32.dll
 TanksPlusPlus.exe
->>>>>>> 4beeb6e11e7b417edc483c3fa9f0f57386598a97
+CMakeFiles
+Testing
+cmake_install.cmake
+CMakeCache.txt
+CMakeLists.txt
