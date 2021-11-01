@@ -1,15 +1,16 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include <SFML\Graphics.hpp>
-#include <SFML\Window.hpp>
-#include <SFML\System.hpp>
-#include <SFML\Audio.hpp>
+#include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
+#include <SFML/System.hpp>
+#include <SFML/Audio.hpp>
 #include <iostream>
 
-#include "Player.h"
-#include "Wall.h"
-
+// #include "Player.h"
+// #include "Wall.h"
+#include "Player.cpp"
+#include "Wall.cpp"
 /*
  *	Game
  * 

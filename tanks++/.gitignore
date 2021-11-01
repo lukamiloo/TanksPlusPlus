@@ -1,0 +1,6 @@
+.vs
+.vscode
+sfml-app
+main-o
+main-o.exe
+sfml-app.exe
