@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\TanksPlusPlus.dir/objects.a
+C:\mingw-w64\x86_64-8.1.0-win32-seh-rt_v6-rev0\mingw64\bin\ar.exe cr CMakeFiles\TanksPlusPlus.dir/objects.a @CMakeFiles\TanksPlusPlus.dir\objects1.rsp
+C:\mingw-w64\x86_64-8.1.0-win32-seh-rt_v6-rev0\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\TanksPlusPlus.dir/objects.a -Wl,--no-whole-archive -o TanksPlusPlus.exe -Wl,--out-implib,libTanksPlusPlus.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\TanksPlusPlus.dir\linklibs.rsp
