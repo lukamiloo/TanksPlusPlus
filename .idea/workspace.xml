@@ -16,7 +16,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b9ba3e19-4ad9-4319-8314-92f4b4b247fe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MainMenu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainMenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/MainMenu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TanksPlusPlus.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TanksPlusPlus.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +30,6 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -58,12 +61,12 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="TanksPlusPlus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TanksPlusPlus" TARGET_NAME="TanksPlusPlus" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TanksPlusPlus" RUN_TARGET_NAME="TanksPlusPlus">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TanksPlusPlus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TanksPlusPlus" TARGET_NAME="TanksPlusPlus" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TanksPlusPlus" RUN_TARGET_NAME="TanksPlusPlus">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -82,7 +85,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1635778402431</updated>
-      <workItem from="1635778403914" duration="12120000" />
+      <workItem from="1635778403914" duration="14195000" />
+      <workItem from="1635887298029" duration="2000" />
     </task>
     <servers />
   </component>
@@ -99,5 +103,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

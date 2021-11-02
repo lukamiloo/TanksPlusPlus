@@ -7,8 +7,8 @@
 
 class MainMenu {
 public:
+    //constructor
     MainMenu();
-//    virtual ~MainMenu();
 private:
     void initMainMenu();
 };
