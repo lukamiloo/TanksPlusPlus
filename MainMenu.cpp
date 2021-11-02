@@ -12,12 +12,9 @@ MainMenu::MainMenu() {
 void MainMenu::initMainMenu() {
     sf::RenderWindow window(sf::VideoMode(1920, 1080), "Tanks Plus Plus Menu");
 
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
-
     sf::Texture texture;
-//    if (!texture.loadFromFile("Textures/background.png"))
-//        return EXIT_FAILURE;
+
+    //REMEMBER TO CHECK IF IT DOES NOT WORK AND GIVE ERROR
     texture.loadFromFile("Textures/background.png");
     sf::Sprite sprite(texture);
 

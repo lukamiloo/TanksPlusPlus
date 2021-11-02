@@ -15,32 +15,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b9ba3e19-4ad9-4319-8314-92f4b4b247fe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/Game.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/Game.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/Player.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/Player.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/objects1.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/TanksPlusPlus.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/Game.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MainMenu.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainMenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/MainMenu.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanksPlusPlus.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/TanksPlusPlus.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TanksPlusPlus.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TanksPlusPlus.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1635778402431</updated>
-      <workItem from="1635778403914" duration="12005000" />
+      <workItem from="1635778403914" duration="12120000" />
     </task>
     <servers />
   </component>
