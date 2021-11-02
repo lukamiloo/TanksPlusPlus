@@ -7,16 +7,14 @@
 #include <SFML/Audio.hpp>
 #include <iostream>
 
-<<<<<<< HEAD
  #include "Player.h"
  #include "Wall.h"
 //#include "Player.cpp"
 //#include "Wall.cpp"
-=======
+
 #include "Player.h"
 #include "Wall.h"
 
->>>>>>> 4beeb6e11e7b417edc483c3fa9f0f57386598a97
 /*
  *	Game
  * 

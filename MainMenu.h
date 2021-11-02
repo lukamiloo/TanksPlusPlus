@@ -5,4 +5,11 @@
 #ifndef TANKSPLUSPLUS_MAINMENU_H
 #define TANKSPLUSPLUS_MAINMENU_H
 
+class MainMenu {
+public:
+    MainMenu();
+//    virtual ~MainMenu();
+private:
+    void initMainMenu();
+};
 #endif //TANKSPLUSPLUS_MAINMENU_H

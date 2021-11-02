@@ -18,6 +18,8 @@ add_executable(TanksPlusPlus
         Player.cpp
         Player.h
         Wall.cpp
-        Wall.h)
+        Wall.h
+        MainMenu.cpp
+        MainMenu.h)
 
 target_link_libraries(TanksPlusPlus sfml-system sfml-window sfml-graphics sfml-audio)

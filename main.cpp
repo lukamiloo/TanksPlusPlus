@@ -1,11 +1,13 @@
 #include "Game.h"
-<<<<<<< HEAD
+#include "MainMenu.h"
 //#include "Game.cpp"
-=======
->>>>>>> 4beeb6e11e7b417edc483c3fa9f0f57386598a97
+
 
 int main()
-{   
+{
+    //init MainMenu
+    MainMenu menu;
+
     // init game
     Game game;
 

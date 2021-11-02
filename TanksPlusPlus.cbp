@@ -92,6 +92,12 @@
 		<Unit filename="C:/Users/User/Documents/University/Third Year Uni/320/Group/TanksPlusPlus/Game.h">
 			<Option target="TanksPlusPlus"/>
 		</Unit>
+		<Unit filename="C:/Users/User/Documents/University/Third Year Uni/320/Group/TanksPlusPlus/MainMenu.cpp">
+			<Option target="TanksPlusPlus"/>
+		</Unit>
+		<Unit filename="C:/Users/User/Documents/University/Third Year Uni/320/Group/TanksPlusPlus/MainMenu.h">
+			<Option target="TanksPlusPlus"/>
+		</Unit>
 		<Unit filename="C:/Users/User/Documents/University/Third Year Uni/320/Group/TanksPlusPlus/Player.cpp">
 			<Option target="TanksPlusPlus"/>
 		</Unit>

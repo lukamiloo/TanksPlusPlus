@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/TanksPlusPlus.dir/Game.cpp.obj"
+  "CMakeFiles/TanksPlusPlus.dir/MainMenu.cpp.obj"
   "CMakeFiles/TanksPlusPlus.dir/Player.cpp.obj"
   "CMakeFiles/TanksPlusPlus.dir/Wall.cpp.obj"
   "CMakeFiles/TanksPlusPlus.dir/main.cpp.obj"
