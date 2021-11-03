@@ -2,7 +2,10 @@
 
 // constructor
 Player::Player() {
+<<<<<<< HEAD
 	this->movementSpeed = 20;
+=======
+>>>>>>> 138ffcf7a50bee8269305974034a502c4112215d
 	initTexture();
 	initSprite();
 }
@@ -23,7 +26,10 @@ void Player::initSprite() {
 	this->player.setTexture(this->texture);
 	this->player.scale(0.2f, 0.2f);
 	this->player.setPosition(860, 540);
+<<<<<<< HEAD
 	this->player.setOrigin(sf::Vector2f(player.getTexture()->getSize().x * 0.5, player.getTexture()->getSize().y * 0.5));//setting origin to the middle of the sprite
+=======
+>>>>>>> 138ffcf7a50bee8269305974034a502c4112215d
 }
 
 /*
@@ -33,6 +39,7 @@ void Player::initSprite() {
  */
 void Player::update() {
 	// TODO movement on key press
+<<<<<<< HEAD
 	if(sf:: Keyboard::isKeyPressed(sf::Keyboard::W))//move forware in direction of front of tank
 		this->player.move(sinf(player.getRotation()*M_PI/180) *4, cosf(player.getRotation()*M_PI/180)*-4);
 	if(sf:: Keyboard::isKeyPressed(sf::Keyboard::S))//move forware in direction of back of tank
@@ -51,6 +58,8 @@ void Player::update() {
  */
 void Player::move(const float xDir, const float yDir){
 	this->player.move(this->movementSpeed * xDir, this->movementSpeed * yDir);
+=======
+>>>>>>> 138ffcf7a50bee8269305974034a502c4112215d
 }
 
 /*
