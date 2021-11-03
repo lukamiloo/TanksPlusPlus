@@ -21,9 +21,11 @@ Testing
 cmake_install.cmake
 CMakeCache.txt
 CMakeLists.txt
-<<<<<<< HEAD
 TanksPlusPlus.cbp
 main.o
-=======
->>>>>>> 138ffcf7a50bee8269305974034a502c4112215d
 .idea
+tanks-button.vcxproj
+tanks-button.vcxproj.filters
+tanks-button.vcxproj.user
+x64
+x64/*
