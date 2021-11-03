@@ -7,14 +7,9 @@
 
 class MainMenu {
 public:
-<<<<<<< HEAD
-    //constructor
-    MainMenu();
-=======
     MainMenu();
     bool switchState;
 //    virtual ~MainMenu();
->>>>>>> 138ffcf7a50bee8269305974034a502c4112215d
 private:
     void initMainMenu();
 };
