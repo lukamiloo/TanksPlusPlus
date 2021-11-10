@@ -16,19 +16,21 @@ void MainMenu::initMainMenu() {
 
     sf::Texture texture;
 
-//    sf::SoundBuffer soundBuffer;
-//    sf::Sound sound;
+    //button press
+    bool buttonSoundHasPlayed = false;
+    sf::SoundBuffer btnSoundBuffer;
+    sf::Sound btnSound;
+    if(!btnSoundBuffer.loadFromFile("Textures/buttonSound.ogg")) {
+        std::cout << "Cant find buttonSound.ogg" <<std::endl;
+    }
+    btnSound.setBuffer(btnSoundBuffer);
 
+    //background main menu music
     sf::Music music;
     if (!music.openFromFile("Textures/MainMenuMadeSong.ogg"))
         std::cout << "Cant find MainMenuMadeSong.ogg" <<std::endl;
     music.play();
     music.setLoop(true);
-
-//    if(!soundBuffer.loadFromFile("Textures/MainMenuMadeSong.ogg")) {
-//        std::cout << "Cant find MainMenuMadeSong.ogg" <<std::endl;
-//    }
-//    sound.setBuffer(soundBuffer);
 
     //REMEMBER TO CHECK IF IT DOES NOT WORK AND GIVE ERROR
     texture.loadFromFile("Textures/background.png");
@@ -45,12 +47,23 @@ void MainMenu::initMainMenu() {
             if (event.type == sf::Event::Closed)
                 window.close();
             if (event.type == sf::Event::MouseMoved) {
-                if (playBtn.isMouseOver(window))
+                if (playBtn.isMouseOver(window)) {
                     playBtn.setBackColor(sf::Color::Cyan);
-                else
+                    //only play button sound once
+                    if(!buttonSoundHasPlayed) {
+                        btnSound.play();
+                        buttonSoundHasPlayed = true;
+                    }
+                }
+                else {
                     playBtn.setBackColor(sf::Color::White);
+                    //reset button sound if user mouse leaves the button
+                    buttonSoundHasPlayed = false;
+                }
+
             }
             if (event.type == sf::Event::MouseButtonPressed) {
+                btnSound.play();
                 if (playBtn.isMouseOver(window)) {
                     switchState = true;
                     window.close();
