@@ -5,6 +5,7 @@
 #include "MainMenu.h"
 #include <SFML/Graphics.hpp>
 #include <cmath>
+#include <SFML/Audio.hpp>
 #include "Button.h"
 MainMenu::MainMenu() {
     this->initMainMenu();
@@ -14,6 +15,20 @@ void MainMenu::initMainMenu() {
     sf::RenderWindow window(sf::VideoMode(1920, 1080), "Tanks Plus Plus Menu");
 
     sf::Texture texture;
+
+//    sf::SoundBuffer soundBuffer;
+//    sf::Sound sound;
+
+    sf::Music music;
+    if (!music.openFromFile("Textures/MainMenuMadeSong.ogg"))
+        std::cout << "Cant find MainMenuMadeSong.ogg" <<std::endl;
+    music.play();
+    music.setLoop(true);
+
+//    if(!soundBuffer.loadFromFile("Textures/MainMenuMadeSong.ogg")) {
+//        std::cout << "Cant find MainMenuMadeSong.ogg" <<std::endl;
+//    }
+//    sound.setBuffer(soundBuffer);
 
     //REMEMBER TO CHECK IF IT DOES NOT WORK AND GIVE ERROR
     texture.loadFromFile("Textures/background.png");
