@@ -12,7 +12,6 @@ Player::Player() {
 Player::~Player() {
 
 }
-// hey hey
 
 // initialize player texture
 void Player::initTexture() {
@@ -25,6 +24,8 @@ void Player::initSprite() {
 	this->player.scale(0.15f, 0.15f);
 	this->player.setPosition(860, 540);
 	this->player.setOrigin(sf::Vector2f(player.getTexture()->getSize().x * 0.5, player.getTexture()->getSize().y * 0.5));//setting origin to the middle of the sprite
+	this->isFiring = false;
+	clock.restart();
 }
 
 /*
@@ -48,18 +49,33 @@ void Player::update() {
 	}
 
 	if(this->isFiring){
-		if(bulletVec.size() < 2){
+
+		if( bulletVec.size() < 1){
 			Bullet newBullet;
-			newBullet.initTexture();
-			newBullet.initBullet();
-			newBullet.makeBullet(sf::Vector2f(player.getPosition().x + (75 * sinf(player.getRotation()*M_PI/180)), player.getPosition().y - (75 * cosf(player.getRotation()*M_PI/180))), player.getRotation()-90);
+			newBullet.moveBullet(sf::Vector2f(player.getPosition().x + (75 * sinf(player.getRotation()*M_PI/180)), player.getPosition().y - (75 * cosf(player.getRotation()*M_PI/180))), player.getRotation()-90);
 			this->bulletVec.push_back(newBullet);
+			isFiring = false;
+		}
+
+		if (clock.getElapsedTime().asSeconds() > 0.5){
+			Bullet newBullet;
+			newBullet.moveBullet(sf::Vector2f(player.getPosition().x + (75 * sinf(player.getRotation()*M_PI/180)), player.getPosition().y - (75 * cosf(player.getRotation()*M_PI/180))), player.getRotation()-90);
+			this->bulletVec.push_back(newBullet);
+			clock.restart();
 			isFiring = false;
 		}
 	}
 
-	//For the bullet when doing collision all you need to add is bulletVec.erase(bulletVec.begin());
-	
+	for(int i = 0; i < bulletVec.size(); i++){
+		if(bulletVec[i].getX() > 1850 || bulletVec[i].getX() < 70 || bulletVec[i].getY() > 1010 || bulletVec[i].getY() < 70){
+			if(bulletVec[i].getBounce()){
+				bulletVec.erase(bulletVec.begin() + i);
+				isFiring = false;
+			} else {
+				bulletVec[i].setBounce(true);
+			}
+		}
+	}
 }
 
 /*
@@ -84,6 +100,10 @@ void Player::render(sf::RenderTarget* target) {
 	
 	for (int i = 0; i < bulletVec.size(); i++) {
 		this->bulletVec[i].render(target);
-		this->bulletVec[i].shoot(10);
+		if(!bulletVec[i].getBounce()){
+			this->bulletVec[i].shoot(10);
+		} else {	
+			this->bulletVec[i].shoot(-10);
+		}
 	}
 }

@@ -11,16 +11,21 @@ class Bullet
 {
     public:
         Bullet();
-        //Bullet(sf::Vector2f, sf::Vector2f, float);
+        virtual ~Bullet();
         void render(sf::RenderTarget* target);
-        //void shoot(sf::Vector2f, sf::Vector2f, float);
-        void makeBullet(sf::Vector2f, float);
-        void initTexture();
-        void initBullet();
+        void moveBullet(sf::Vector2f, float);
         void shoot(int);
+        float getX();
+        float getY();
+        float getRn();
+        bool getBounce();
+        void setBounce(bool);
     private:
         sf::RectangleShape bullet;
         sf::Texture texture;
+        bool bounce;
+        void initTexture();
+        void initBullet();
 };
 
 #endif

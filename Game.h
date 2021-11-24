@@ -23,32 +23,32 @@
  *	and rendered here
  */
 class Game {
-private:
-	// private variables
-	sf::RenderWindow* window;
-	sf::Event ev;
-	Player* player;
-	std::vector<Wall*> walls;
-	// initialization functions
-	void initVariables();
-	void initWindow();
-	void initPlayer();
-	void initWalls();
+	public:
+		// constructor / destructor
+		Game();
+		virtual ~Game();
 
-	void drawBackground(sf::RenderTarget* target);
-	sf::Sprite background;
-public:
-	// constructor / destructor
-	Game();
-	virtual ~Game();
+		// accessors
+		const bool running() const;
 
-	// accessors
-	const bool running() const;
+		// game functions
+		void pollEvents();
+		void update();
+		void render();
+	private:
+		// private variables
+		sf::RenderWindow* window;
+		sf::Event ev;
+		Player* player;
+		std::vector<Wall*> walls;
+		// initialization functions
+		void initVariables();
+		void initWindow();
+		void initPlayer();
+		void initWalls();
 
-	// game functions
-	void pollEvents();
-	void update();
-	void render();
+		void drawBackground(sf::RenderTarget* target);
+		sf::Sprite background;
 
 };
 
