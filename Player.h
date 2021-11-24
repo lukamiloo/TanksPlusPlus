@@ -8,6 +8,7 @@
 #include <SFML/Audio.hpp>
 #include <iostream>
 #include <math.h>
+#include "Bullet.h"
 
 /*
  *	Player
@@ -20,10 +21,12 @@ private:
 	sf::Sprite player;
 	sf::Texture texture;
 	float movementSpeed;
-
+	bool isFiring;
+	std::vector<Bullet> bulletVec;
 	// initialization functions
 	void initTexture();
 	void initSprite();
+	void initBullet();
 public:
 	// constructor / destructor
 	Player();

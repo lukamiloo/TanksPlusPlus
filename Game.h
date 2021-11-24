@@ -14,6 +14,7 @@
 
 #include "Player.h"
 #include "Wall.h"
+#include "Bullet.h"
 
 /*
  *	Game
@@ -33,6 +34,9 @@ private:
 	void initWindow();
 	void initPlayer();
 	void initWalls();
+
+	void drawBackground(sf::RenderTarget* target);
+	sf::Sprite background;
 public:
 	// constructor / destructor
 	Game();
@@ -45,6 +49,7 @@ public:
 	void pollEvents();
 	void update();
 	void render();
+
 };
 
 #endif

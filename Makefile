@@ -3,7 +3,7 @@ TARGET=TanksPlusPlus
 INCLUDE=-I"C:/SFML/include"
 LIB=-L"C:/SFML/lib"
 LIBS=-lsfml-system -lsfml-window -lsfml-graphics -lsfml-audio -lsfml-network
-CLASSES=Game.cpp Player.cpp Wall.cpp MainMenu.cpp Button.cpp
+CLASSES=Game.cpp Player.cpp Wall.cpp MainMenu.cpp Button.cpp Bullet.cpp
 
 all: $(TARGET)
 $(TARGET): main.cpp

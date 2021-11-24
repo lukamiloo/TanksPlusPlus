@@ -1,5 +1,6 @@
 #include "Game.h"
 #include "Player.h"
+#include "Bullet.h"
 
 // constructor
 Game::Game() {
@@ -31,6 +32,7 @@ void Game::initWindow() {
 // initialize player
 void Game::initPlayer() {
 	this->player = new Player();
+	
 }
 
 // initialize walls
@@ -41,6 +43,7 @@ void Game::initWalls() {
 	Wall* wallBottom = new Wall(1920, 50, 0, 0);
 	walls = { wallLeft, wallRight, wallTop, wallBottom };
 }
+
 
 /*
  *	running
@@ -95,14 +98,21 @@ void Game::update() {
  * 
  *	Renders the screen with updated game state. Call after update is called.
  */
+
+void Game::drawBackground(sf::RenderTarget* target){
+	sf::Texture backgroundTexture;
+	backgroundTexture.loadFromFile("Textures/gameBackground.png");
+	this->background.setTexture(backgroundTexture);
+	target->draw(this->background);
+}
+
 void Game::render() {
 	this->window->clear(sf::Color::White);
-
 	// all necessary renders go here
+	this->drawBackground(this->window);
 	this->player->render(this->window);
 	for (auto& wall : this->walls) {
 		wall->render(this->window);
 	}
-
 	this->window->display();
 }
