@@ -10,11 +10,6 @@ Bullet::Bullet()
 void Bullet::initTexture() {
 	this->texture.loadFromFile("Textures/bullet.png");
 }
-// void Bullet::shoot(sf::Vector2f direction, sf::Vector2f position, float speed) {
-//     this->direction = direction;
-//     this->speed = speed;
-//     this->bullet.setPosition(position);
-// }
 
 void Bullet::shoot(int speed) {
     this->bullet.move(sinf((bullet.getRotation()+90)*M_PI/180) * speed, cosf((bullet.getRotation()+90)*M_PI/180)*-speed);

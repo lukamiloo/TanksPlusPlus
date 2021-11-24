@@ -46,7 +46,7 @@ void Player::update() {
 	if(sf:: Keyboard::isKeyPressed(sf::Keyboard::C)){//shoot
 		this->isFiring = true;
 	}
-	
+
 	if(this->isFiring){
 		if(bulletVec.size() < 2){
 			Bullet newBullet;
@@ -71,14 +71,6 @@ void Player::update() {
 void Player::move(const float xDir, const float yDir){
 	this->player.move(this->movementSpeed * xDir, this->movementSpeed * yDir);
 }
-
-// int Player::getX() {
-// 	return this->player.getPosition().x;
-// }
-
-// int Player::getY() {
-// 	return this->player.getPosition().y;
-// }
 
 /*
  *	render
