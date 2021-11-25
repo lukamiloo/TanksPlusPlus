@@ -10,7 +10,7 @@
 class Bullet
 {
     public:
-        Bullet();
+        Bullet(sf::Vector2f, float);
         virtual ~Bullet();
         void render(sf::RenderTarget* target);
         void moveBullet(sf::Vector2f, float);
@@ -18,6 +18,7 @@ class Bullet
         float getX();
         float getY();
         float getRn();
+        void setRn(float);
         bool getBounce();
         void setBounce(bool);
     private:
@@ -25,7 +26,7 @@ class Bullet
         sf::Texture texture;
         bool bounce;
         void initTexture();
-        void initBullet();
+        void initBullet(sf::Vector2f, float);
 };
 
 #endif

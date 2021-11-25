@@ -26,6 +26,7 @@ void Player::initSprite() {
 	this->player.setOrigin(sf::Vector2f(player.getTexture()->getSize().x * 0.5, player.getTexture()->getSize().y * 0.5));//setting origin to the middle of the sprite
 	this->isFiring = false;
 	tickRate = timer.restart();
+	this->health = 3;
 	this->movementSmooth = ((float)tickRate.asMilliseconds() / 1000);
 	clock.restart();
 }
@@ -49,32 +50,39 @@ void Player::update() {
 	if(sf:: Keyboard::isKeyPressed(sf::Keyboard::C)){//shoot
 		this->isFiring = true;
 	}
+	
+
+	for(int i = 0; i < this->health; i++) { 
+		this->heartVec.push_back(new Heart(sf::Vector2f(i*50 + 100, 1000), sf::Color::Red));
+	}
+
+	//When the collision is done to delete the heart just do this->heartVec.pop_back(); or this->heartVec.erase(this->heartVec.begin());
+
+	if(heartVec.size() < 0){
+		//player dies?
+	}
 
 	if(this->isFiring){
 
 		if( bulletVec.size() < 1){
-			Bullet newBullet;
-			newBullet.moveBullet(sf::Vector2f(player.getPosition().x + (75 * sinf(player.getRotation()*M_PI/180)), player.getPosition().y - (75 * cosf(player.getRotation()*M_PI/180))), player.getRotation()-90);
-			this->bulletVec.push_back(newBullet);
+			this->bulletVec.push_back(new Bullet(sf::Vector2f(player.getPosition().x + (75 * sinf(player.getRotation()*M_PI/180)), player.getPosition().y - (75 * cosf(player.getRotation()*M_PI/180))), player.getRotation()-90));
 			isFiring = false;
 		}
 
 		if (clock.getElapsedTime().asSeconds() > 0.5){
-			Bullet newBullet;
-			newBullet.moveBullet(sf::Vector2f(player.getPosition().x + (75 * sinf(player.getRotation()*M_PI/180)), player.getPosition().y - (75 * cosf(player.getRotation()*M_PI/180))), player.getRotation()-90);
-			this->bulletVec.push_back(newBullet);
+			this->bulletVec.push_back(new Bullet(sf::Vector2f(player.getPosition().x + (75 * sinf(player.getRotation()*M_PI/180)), player.getPosition().y - (75 * cosf(player.getRotation()*M_PI/180))), player.getRotation()-90));
 			clock.restart();
 			isFiring = false;
 		}
 	}
 
-	for(int i = 0; i < bulletVec.size(); i++){
-		if(bulletVec[i].getX() > 1850 || bulletVec[i].getX() < 70 || bulletVec[i].getY() > 1010 || bulletVec[i].getY() < 70){
-			if(bulletVec[i].getBounce()){
+	for(int i = 0; i < this->bulletVec.size(); i++){
+		if(this->bulletVec[i]->getX() > 1850 || this->bulletVec[i]->getX() < 70 || this->bulletVec[i]->getY() > 1010 || this->bulletVec[i]->getY() < 70){
+			if(this->bulletVec[i]->getBounce()){
 				bulletVec.erase(bulletVec.begin() + i);
 				isFiring = false;
 			} else {
-				bulletVec[i].setBounce(true);
+				this->bulletVec[i]->setBounce(true);
 			}
 		}
 	}
@@ -99,13 +107,16 @@ void Player::move(const float xDir, const float yDir){
  */
 void Player::render(sf::RenderTarget* target) {
 	target->draw(this->player);
-	this->heart.render(target);
 	for (int i = 0; i < bulletVec.size(); i++) {
-		this->bulletVec[i].render(target);
-		if(!bulletVec[i].getBounce()){
-			this->bulletVec[i].shoot(10);
+		this->bulletVec[i]->render(target);
+		if(!bulletVec[i]->getBounce()){
+			this->bulletVec[i]->shoot(10);
 		} else {	
-			this->bulletVec[i].shoot(-10);
+			this->bulletVec[i]->shoot(-10);
 		}
+	}
+
+	for (int i = 0; i < heartVec.size(); i++) {
+		this->heartVec[i]->render(target);
 	}
 }

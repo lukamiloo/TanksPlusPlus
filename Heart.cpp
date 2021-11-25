@@ -1,10 +1,10 @@
 #include "Heart.h"
 #define M_PI 3.14159265358979323846
 
-Heart::Heart()
+Heart::Heart(sf::Vector2f pos, sf::Color color)
 {
     this->initTexture();
-    this->initHealth();
+    this->initHealth(pos, color);
 }
 
 Heart::~Heart()
@@ -18,12 +18,12 @@ void Heart::initTexture() {
 }
 
 
-void Heart::initHealth() {
-    this->heart.setFillColor(sf::Color::Red);
+void Heart::initHealth(sf::Vector2f pos, sf::Color color) {
+    this->heart.setFillColor(color); //pass in color as argument
     this->heart.setTexture(&this->texture);
-    this->heart.setSize(sf::Vector2f(512, 512));
+    this->heart.setSize(sf::Vector2f(32, 32));
     this->heart.setOrigin(this->heart.getSize().x / 2, this->heart.getSize().y / 2);
-    this->heart.setPosition(500, 500);
+    this->heart.setPosition(pos);
 }
 
 

@@ -10,14 +10,14 @@
 class Heart
 {
     public:
-        Heart();
+        Heart(sf::Vector2f, sf::Color);
         virtual ~Heart();
         void render(sf::RenderTarget* target);
     private:
         sf::RectangleShape heart;
         sf::Texture texture;
         void initTexture();
-        void initHealth();
+        void initHealth(sf::Vector2f, sf::Color);
 };
 
 #endif
