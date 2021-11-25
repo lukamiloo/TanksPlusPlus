@@ -25,6 +25,8 @@ void Player::initSprite() {
 	this->player.setPosition(860, 540);
 	this->player.setOrigin(sf::Vector2f(player.getTexture()->getSize().x * 0.5, player.getTexture()->getSize().y * 0.5));//setting origin to the middle of the sprite
 	this->isFiring = false;
+	tickRate = timer.restart();
+	this->movementSmooth = ((float)tickRate.asMilliseconds() / 1000);
 	clock.restart();
 }
 
@@ -36,9 +38,9 @@ void Player::initSprite() {
 void Player::update() {
 	// TODO movement on key press
 	if(sf:: Keyboard::isKeyPressed(sf::Keyboard::W))//move forware in direction of front of tank
-		this->player.move(sinf(player.getRotation()*M_PI/180) * 4, cosf(player.getRotation()*M_PI/180)*-4);
+		this->player.move(sinf(player.getRotation()*M_PI/180) * 4, cosf(player.getRotation()*M_PI/180)* -4 );
 	if(sf:: Keyboard::isKeyPressed(sf::Keyboard::S))//move forware in direction of back of tank
-		this->player.move(sinf(player.getRotation()*M_PI/180) *-4, cosf(player.getRotation()*M_PI/180)*4);
+		this->player.move(sinf(player.getRotation()*M_PI/180) * -4, cosf(player.getRotation()*M_PI/180) * 4);
 	if(sf:: Keyboard::isKeyPressed(sf::Keyboard::D))//rotate clockwise
 		this->player.rotate(2.f);
 	if(sf:: Keyboard::isKeyPressed(sf::Keyboard::A))//rotate counterclockwise
@@ -85,7 +87,7 @@ void Player::update() {
  *	allows dev to modify movement speed
  */
 void Player::move(const float xDir, const float yDir){
-	this->player.move(this->movementSpeed * xDir, this->movementSpeed * yDir);
+	this->player.move(this->movementSpeed * xDir * this->movementSmooth, this->movementSpeed * yDir * this->movementSmooth);
 }
 
 /*
