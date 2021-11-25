@@ -9,6 +9,7 @@
 #include <iostream>
 #include <math.h>
 #include "Bullet.h"
+#include "Heart.h"
 
 /*
  *	Player
@@ -35,6 +36,7 @@ class Player {
 		bool isFiring;
 		std::vector<Bullet> bulletVec;
 		sf::Clock clock;
+		Heart heart;
 		// initialization functions
 		void initTexture();
 		void initSprite();

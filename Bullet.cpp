@@ -23,7 +23,6 @@ void Bullet::shoot(int speed) {
 
 void Bullet::initBullet() {
     this->bullet.setFillColor(sf::Color(178, 180, 183));
-    this->bullet.setOutlineColor(sf::Color(0, 0, 0));
     this->bullet.setTexture(&this->texture);
     this->bullet.setSize(sf::Vector2f(25, 11.125));
     bounce = false;

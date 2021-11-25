@@ -97,7 +97,7 @@ void Player::move(const float xDir, const float yDir){
  */
 void Player::render(sf::RenderTarget* target) {
 	target->draw(this->player);
-	
+	this->heart.render(target);
 	for (int i = 0; i < bulletVec.size(); i++) {
 		this->bulletVec[i].render(target);
 		if(!bulletVec[i].getBounce()){
