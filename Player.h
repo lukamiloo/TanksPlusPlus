@@ -36,7 +36,13 @@ class Player {
 		bool isFiring;
 		std::vector<Bullet> bulletVec;
 		sf::Clock clock;
+<<<<<<< HEAD
 		Heart heart;
+=======
+		sf::Clock timer;
+		int movementSmooth;
+    	sf::Time tickRate;
+>>>>>>> eb84b7f158270353b807c1499344910deed501d9
 		// initialization functions
 		void initTexture();
 		void initSprite();
