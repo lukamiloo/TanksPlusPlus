@@ -114,5 +114,18 @@ void Game::render() {
 	for (auto& wall : this->walls) {
 		wall->render(this->window);
 	}
+
+	sf::Text text;
+	sf::Font font;
+	font.loadFromFile("Fonts/score.ttf");
+	text.setFont(font);
+	text.setString("0   0");
+	text.setCharacterSize(64);
+	text.setFillColor(sf::Color::Black);
+	text.setStyle(sf::Text::Bold);
+	sf::FloatRect textRect = text.getLocalBounds();
+	text.setOrigin(textRect.left + textRect.width / 2.0f, textRect.top + textRect.height / 2.0f);
+	text.setPosition({ 1920 / 2, 100 });
+	window->draw(text);
 	this->window->display();
 }

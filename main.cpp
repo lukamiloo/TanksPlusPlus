@@ -8,7 +8,7 @@ int main()
 {
     //init MainMenu
     MainMenu menu;
-
+    menu.switchState = true;
     // init game
     if (menu.switchState == true) {
         Game game;
