@@ -31,8 +31,9 @@ void Game::initWindow() {
 
 // initialize player
 void Game::initPlayer() {
-	this->player = new Player();
-	
+	//key bindings parameters go  (up, down, left, right, shoot)
+	this->player = new Player(sf::Keyboard::Key::W, sf::Keyboard::Key::S, sf::Keyboard::Key::A, sf::Keyboard::Key::D, sf::Keyboard::Key::C);
+	//this->player2 = new Player(sf::Keyboard::Key::W, sf::Keyboard::Key::S, sf::Keyboard::Key::A, sf::Keyboard::Key::D, sf::Keyboard::Key::C);
 }
 
 // initialize walls

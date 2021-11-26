@@ -2,10 +2,15 @@
 #define M_PI 3.14159265358979323846
 
 // constructor
-Player::Player() {
+Player::Player(sf::Keyboard::Key upKey, sf::Keyboard::Key downKey, sf::Keyboard::Key leftKey, sf::Keyboard::Key rightKey, sf::Keyboard::Key shootKey) {
 	this->movementSpeed = 20;
 	initTexture();
 	initSprite();
+	this->upKey = upKey;
+	this->downKey = downKey;
+	this->leftKey = leftKey;
+	this->rightKey = rightKey;
+	this->shootKey = shootKey;
 }
 
 // destructor
@@ -30,6 +35,21 @@ void Player::initSprite() {
 	this->movementSmooth = ((float)tickRate.asMilliseconds() / 1000);
 	clock.restart();
 }
+void Player::updateInput(){
+	// TODO movement on key press
+	if(sf:: Keyboard::isKeyPressed(this->upKey))//move forware in direction of front of tank
+		this->player.move(sinf(player.getRotation()*M_PI/180) * 4, cosf(player.getRotation()*M_PI/180)* -4 );
+	if(sf:: Keyboard::isKeyPressed(this->downKey))//move forware in direction of back of tank
+		this->player.move(sinf(player.getRotation()*M_PI/180) * -4, cosf(player.getRotation()*M_PI/180) * 4);
+	if(sf:: Keyboard::isKeyPressed(this->rightKey))//rotate clockwise
+		this->player.rotate(2.f);
+	if(sf:: Keyboard::isKeyPressed(this->leftKey))//rotate counterclockwise
+		this->player.rotate(-2.f);
+	
+	if(sf:: Keyboard::isKeyPressed(this->shootKey)){//shoot
+		this->isFiring = true;
+	}
+}
 
 /*
  *	update
@@ -38,18 +58,7 @@ void Player::initSprite() {
  */
 void Player::update() {
 	// TODO movement on key press
-	if(sf:: Keyboard::isKeyPressed(sf::Keyboard::W))//move forware in direction of front of tank
-		this->player.move(sinf(player.getRotation()*M_PI/180) * 4, cosf(player.getRotation()*M_PI/180)* -4 );
-	if(sf:: Keyboard::isKeyPressed(sf::Keyboard::S))//move forware in direction of back of tank
-		this->player.move(sinf(player.getRotation()*M_PI/180) * -4, cosf(player.getRotation()*M_PI/180) * 4);
-	if(sf:: Keyboard::isKeyPressed(sf::Keyboard::D))//rotate clockwise
-		this->player.rotate(2.f);
-	if(sf:: Keyboard::isKeyPressed(sf::Keyboard::A))//rotate counterclockwise
-		this->player.rotate(-2.f);
-	
-	if(sf:: Keyboard::isKeyPressed(sf::Keyboard::C)){//shoot
-		this->isFiring = true;
-	}
+	this->updateInput();
 	
 
 	for(int i = 0; i < this->health; i++) { 
