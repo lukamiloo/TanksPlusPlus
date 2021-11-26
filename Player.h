@@ -19,17 +19,22 @@
 class Player {
 	public:
 		// constructor / destructor
-		Player();
+		Player(sf::Keyboard::Key upKey, sf::Keyboard::Key downKey, sf::Keyboard::Key leftKey, sf::Keyboard::Key rightKey, sf::Keyboard::Key shootKey);
 		virtual ~Player();
 
 		//move player
 		void move(const float xDir, const float yDir);
-
+		void updateInput();
 		// display functions
 		void update();
 		void render(sf::RenderTarget* target);
 	private:
 		// private variables
+		sf::Keyboard::Key upKey;
+		sf::Keyboard::Key downKey; 
+		sf::Keyboard::Key leftKey;
+		sf::Keyboard::Key rightKey; 
+		sf::Keyboard::Key shootKey;
 		sf::Sprite player;
 		sf::Texture texture;
 		float movementSpeed;
