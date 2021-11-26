@@ -29,7 +29,7 @@ void Player::initTexture() {
 void Player::initSprite() {
 	this->player.setTexture(this->texture);
 	this->player.scale(0.15f, 0.15f);
-	this->player.setPosition(this->pos, 540);
+	this->player.setPosition(850, 540);
 	this->player.setOrigin(sf::Vector2f(player.getTexture()->getSize().x * 0.5, player.getTexture()->getSize().y * 0.5));//setting origin to the middle of the sprite
 	this->isFiring = false;
 	tickRate = timer.restart();
