@@ -62,7 +62,7 @@ void Player::update() {
 		//player dies?
 	}
 
-	if(this->isFiring){
+	if(this->isFiring){ 
 
 		if( bulletVec.size() < 1){
 			this->bulletVec.push_back(new Bullet(sf::Vector2f(player.getPosition().x + (75 * sinf(player.getRotation()*M_PI/180)), player.getPosition().y - (75 * cosf(player.getRotation()*M_PI/180))), player.getRotation()-90));
