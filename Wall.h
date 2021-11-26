@@ -11,7 +11,7 @@ class Wall {
 	public:
 		Wall(float l, float w, float posX, float posY);
 		virtual ~Wall();
-
+		sf::FloatRect getBounds();
 		void update();
 		void render(sf::RenderWindow* target);
 		

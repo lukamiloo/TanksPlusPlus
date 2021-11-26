@@ -40,6 +40,7 @@ class Game {
 		sf::RenderWindow* window;
 		sf::Event ev;
 		Player* player;
+		Player* player2;
 		std::vector<Wall*> walls;
 		// initialization functions
 		void initVariables();

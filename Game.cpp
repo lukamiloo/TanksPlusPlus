@@ -32,8 +32,8 @@ void Game::initWindow() {
 // initialize player
 void Game::initPlayer() {
 	//key bindings parameters go  (up, down, left, right, shoot)
-	this->player = new Player(sf::Keyboard::Key::W, sf::Keyboard::Key::S, sf::Keyboard::Key::A, sf::Keyboard::Key::D, sf::Keyboard::Key::C);
-	//this->player2 = new Player(sf::Keyboard::Key::W, sf::Keyboard::Key::S, sf::Keyboard::Key::A, sf::Keyboard::Key::D, sf::Keyboard::Key::C);
+	this->player = new Player(sf::Keyboard::Key::W, sf::Keyboard::Key::S, sf::Keyboard::Key::A, sf::Keyboard::Key::D, sf::Keyboard::Key::C, 400, 200);
+	this->player2 = new Player(sf::Keyboard::Key::Up, sf::Keyboard::Key::Down, sf::Keyboard::Key::Left, sf::Keyboard::Key::Right, sf::Keyboard::Key::M, 1500, 1700);
 }
 
 // initialize walls
@@ -87,6 +87,22 @@ void Game::pollEvents() {
 void Game::update() {
 	this->pollEvents();
 	this->player->update();
+	this->player2->update();
+	if(this->player->getBounds().intersects(walls[0]->getBounds())) {
+		this->player->movePos(sf::Vector2f(this->player->getSpeed(), 0));
+	}
+
+	if(this->player->getBounds().intersects(walls[1]->getBounds())) {
+		this->player->movePos(sf::Vector2f(-this->player->getSpeed(), 0));
+	}
+
+	if(this->player->getBounds().intersects(walls[2]->getBounds())) {
+		this->player->movePos(sf::Vector2f(0, -this->player->getSpeed()));
+	}
+
+	if(this->player->getBounds().intersects(walls[3]->getBounds())) {
+		this->player->movePos(sf::Vector2f(0, this->player->getSpeed()));
+	}
 
 	// unnecessary as walls do not get updated as of now
 	// for (auto& wall : this->walls) {
@@ -112,6 +128,7 @@ void Game::render() {
 	// all necessary renders go here
 	this->drawBackground(this->window);
 	this->player->render(this->window);
+	this->player2->render(this->window);
 	for (auto& wall : this->walls) {
 		wall->render(this->window);
 	}

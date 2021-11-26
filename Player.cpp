@@ -2,10 +2,12 @@
 #define M_PI 3.14159265358979323846
 
 // constructor
-Player::Player(sf::Keyboard::Key upKey, sf::Keyboard::Key downKey, sf::Keyboard::Key leftKey, sf::Keyboard::Key rightKey, sf::Keyboard::Key shootKey) {
+Player::Player(sf::Keyboard::Key upKey, sf::Keyboard::Key downKey, sf::Keyboard::Key leftKey, sf::Keyboard::Key rightKey, sf::Keyboard::Key shootKey, float pos, int heartPos) {
 	this->movementSpeed = 20;
 	initTexture();
 	initSprite();
+	this->pos = pos;
+	this->heartPos = heartPos;
 	this->upKey = upKey;
 	this->downKey = downKey;
 	this->leftKey = leftKey;
@@ -27,7 +29,7 @@ void Player::initTexture() {
 void Player::initSprite() {
 	this->player.setTexture(this->texture);
 	this->player.scale(0.15f, 0.15f);
-	this->player.setPosition(860, 540);
+	this->player.setPosition(this->pos, 540);
 	this->player.setOrigin(sf::Vector2f(player.getTexture()->getSize().x * 0.5, player.getTexture()->getSize().y * 0.5));//setting origin to the middle of the sprite
 	this->isFiring = false;
 	tickRate = timer.restart();
@@ -35,6 +37,7 @@ void Player::initSprite() {
 	this->movementSmooth = ((float)tickRate.asMilliseconds() / 1000);
 	clock.restart();
 }
+
 void Player::updateInput(){
 	// TODO movement on key press
 	if(sf:: Keyboard::isKeyPressed(this->upKey))//move forware in direction of front of tank
@@ -62,7 +65,7 @@ void Player::update() {
 	
 
 	for(int i = 0; i < this->health; i++) { 
-		this->heartVec.push_back(new Heart(sf::Vector2f(i*50 + 100, 1000), sf::Color::Red));
+		this->heartVec.push_back(new Heart(sf::Vector2f(i*50 + this->heartPos, 1000), sf::Color::Red));
 	}
 
 	//When the collision is done to delete the heart just do this->heartVec.pop_back(); or this->heartVec.erase(this->heartVec.begin());
@@ -108,6 +111,22 @@ void Player::move(const float xDir, const float yDir){
 	this->player.move(this->movementSpeed * xDir * this->movementSmooth, this->movementSpeed * yDir * this->movementSmooth);
 }
 
+void Player::movePos(sf::Vector2f vec){
+	this->player.move(vec.x, vec.y);
+}
+
+//get speed of player
+float Player::getSpeed(){
+	return this->movementSpeed;
+}
+//get position of player
+sf::Vector2f Player::getPosition(){
+	return this->player.getPosition();
+}
+
+sf::FloatRect Player::getBounds() {
+	return this->player.getGlobalBounds();
+}
 /*
  *	render
  * 
