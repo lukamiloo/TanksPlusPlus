@@ -80,6 +80,7 @@ void Player::update() {
 		if(this->bulletVec[i]->getX() > 1850 || this->bulletVec[i]->getX() < 70 || this->bulletVec[i]->getY() > 1010 || this->bulletVec[i]->getY() < 70){
 			if(this->bulletVec[i]->getBounce()){
 				bulletVec.erase(bulletVec.begin() + i);
+				bulletVec.shrink_to_fit();
 				isFiring = false;
 			} else {
 				this->bulletVec[i]->setBounce(true);

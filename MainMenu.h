@@ -9,7 +9,7 @@ class MainMenu {
 public:
     MainMenu();
     bool switchState;
-//    virtual ~MainMenu();
+    virtual ~MainMenu();
 private:
     void initMainMenu();
 };

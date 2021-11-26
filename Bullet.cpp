@@ -10,6 +10,8 @@ Bullet::Bullet(sf::Vector2f pos, float direction)
 Bullet::~Bullet()
 {
     //dtor
+    delete this;
+    free(this);
 
 }
 
