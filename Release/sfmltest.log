@@ -1,9 +1,0 @@
-﻿  Game.cpp
-C:\Users\Jimmy\C++Projects\sfmltest\sfmltest\Game.cpp(178,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Jimmy\C++Projects\sfmltest\sfmltest\Game.cpp(193,21): warning C4018: '<': signed/unsigned mismatch
-  Generating code
-  2 of 430 functions ( 0.5%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  sfmltest.vcxproj -> C:\Users\Jimmy\C++Projects\sfmltest\Release\sfmltest.exe
