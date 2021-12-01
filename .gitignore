@@ -28,6 +28,10 @@ main.o
 tanks-button.vcxproj
 tanks-button.vcxproj.filters
 tanks-button.vcxproj.user
+sfmltest.vcxproj
+sfmltest.vcxproj.filters
+sfmltest.vcxproj.user
+Release
 x64
 x64/*
 vc140.pdb

@@ -23,6 +23,10 @@ class Player {
 		virtual ~Player();
 		float getSpeed();
 	
+		std::vector<Bullet*> bulletVec;
+		std::vector<Heart*> heartVec;
+		int health;
+
 		//move player
 		void move(const float xDir, const float yDir);
 		void movePos(sf::Vector2f);
@@ -43,10 +47,7 @@ class Player {
 		sf::Texture texture;
 		float movementSpeed;
 		bool isFiring;
-		std::vector<Bullet*> bulletVec;
 		sf::Clock clock;
-		std::vector<Heart*> heartVec;
-		int health;
 		sf::Clock timer;
 		int movementSmooth;
     	sf::Time tickRate;

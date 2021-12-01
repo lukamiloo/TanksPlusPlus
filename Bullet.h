@@ -21,6 +21,7 @@ class Bullet
         void setRn(float);
         bool getBounce();
         void setBounce(bool);
+        sf::FloatRect getBounds();
     private:
         sf::RectangleShape bullet;
         sf::Texture texture;

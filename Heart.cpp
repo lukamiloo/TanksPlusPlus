@@ -10,7 +10,6 @@ Heart::Heart(sf::Vector2f pos, sf::Color color)
 Heart::~Heart()
 {
     //dtor
-
 }
 
 void Heart::initTexture() {

@@ -12,7 +12,6 @@ Bullet::~Bullet()
     //dtor
     delete this;
     free(this);
-
 }
 
 void Bullet::initTexture() {
@@ -43,6 +42,11 @@ bool Bullet::getBounce() {
 
 void Bullet::setBounce(bool bounce) {
     this->bounce = bounce;
+}
+
+sf::FloatRect Bullet::getBounds()
+{
+    return this->bullet.getGlobalBounds();
 }
 
 float Bullet::getX() {
