@@ -2,17 +2,18 @@
 #include "MainMenu.h"
 #include "Button.h"
 //#include "Game.cpp"
-
+#include <Windows.h>
 
 int main()
 {
     //init MainMenu
     MainMenu menu;
-    menu.switchState = true;
+
     // init game
     if (menu.switchState == true) {
         Game game;
-
+        game.update();
+        game.render();
         // main game loop
         while (game.running()) {
             // update

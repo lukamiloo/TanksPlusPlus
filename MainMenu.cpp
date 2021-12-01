@@ -7,12 +7,15 @@
 #include <cmath>
 #include <SFML/Audio.hpp>
 #include "Button.h"
+
 MainMenu::MainMenu() {
     this->initMainMenu();
 }
+
 MainMenu::~MainMenu() {
     //dtor
 }
+
 void MainMenu::initMainMenu() {
     sf::RenderWindow window(sf::VideoMode(1920, 1080), "Tanks Plus Plus Menu");
 

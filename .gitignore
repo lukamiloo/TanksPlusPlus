@@ -18,6 +18,7 @@ openal32.dll
 TanksPlusPlus.exe
 TanksPlusPlus
 CMakeFiles
+Makefile
 Testing
 cmake_install.cmake
 CMakeCache.txt
@@ -25,9 +26,13 @@ CMakeLists.txt
 TanksPlusPlus.cbp
 main.o
 .idea
+tanks-button.vcxproj
+tanks-button.vcxproj.filters
+tanks-button.vcxproj.user
 sfmltest.vcxproj
 sfmltest.vcxproj.filters
 sfmltest.vcxproj.user
+Release
 x64
 x64/*
 vc140.pdb

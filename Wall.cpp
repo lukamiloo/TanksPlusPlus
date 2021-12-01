@@ -12,6 +12,11 @@ Wall::Wall(float l, float w, float posX, float posY) {
 Wall::~Wall() {
 }
 
+//get GlobalBounds
+sf::FloatRect Wall::getBounds() {
+	return this->rect.getGlobalBounds();
+}
+
 // initialize texture
 void Wall::initTexture() {
 	this->texture.loadFromFile("Textures/wall.png");
